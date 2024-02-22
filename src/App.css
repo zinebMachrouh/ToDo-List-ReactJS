@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* background-color: #1e1e1e; */
+  color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  background: url(../public/bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background-color: #fafafa;
+  width: 700px;
+  height: 85vh;
+  margin: 70px 0px;
+  border-radius: 15px;
+  padding: 20px 40px;
+}
+
+header h2 {
+  color: #1e1e1e;
+}
+
+header button {
+  background-color: #b1855d;
+  padding: 7px 10px;
+  border-radius: 0px 5px 5px 0px;
+  color: #fafafa;
+  border: 1px solid #b1855d;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header input {
+  padding: 7px;
+  border-radius: 5px 0px 0px 5px;
+  color: #1e1e1e;
+  border: 1px solid #b1855d;
+  outline: none;
+  font-size: 14px;
+}
+
+.todos{
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+.todo:not(:last-child){
+  border-bottom: 1px solid #1e1e1e32;
+}
+.todo{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px 0px;
 }
-
-.App-link {
-  color: #61dafb;
+.right{
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right span{
+  font-size: 18px;
+}
+.todo button{
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #ef233c;
 }
